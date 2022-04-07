@@ -1,0 +1,12 @@
+// main.scss # Manifest File
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'vendors/scss/bootstrap.scss';
+@import 'base/base';
+@import 'base/reset';
+@import 'base/typography';
+@import 'layout/navigation';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/forms';
+@import 'components/buttons';
