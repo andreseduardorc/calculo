@@ -14,7 +14,7 @@
 
 <body>
 
-    <header>
+    <header class="m-4">
         <h1>calculadora de porcentajes</h1>
     </header>
     <div class=" formulario container  col-6">
@@ -27,10 +27,10 @@
                 <label for="year">ingrese años a calcular</label>
 
                 <br>
-                <label for="total">resultado es </label>
+                <p id="resultPrice"></p>
             </section>
             <section class="box">
-                <input type="" id="precio">
+                <input id="precio">
 
 
                 <input type="number" id="tasa">
@@ -38,8 +38,10 @@
 
                 <input type="number" id="year">
 
-                <input type="" id="total">
+
             </section>
+
+            <button type="button" onclick="calcular()">calcular</button>
 
 
 
