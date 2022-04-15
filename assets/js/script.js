@@ -1,10 +1,12 @@
-function calculoTotal(precio, tasa, year) {
+function calculoTotal(inputPrecio, inputTasa, inputYear) {
 
-    const interes = inputPrecio * inputTasa;
+    const interes = (inputPrecio * inputTasa * inputYear);
 
-    const calculoNuevo = interes * inputYear
+    const calculoNuevo = (interes + inputPrecio);
 
-    return calculoNuevo;
+    const calculoNuevo2 = (calculoNuevo / inputYear)
+
+    return calculoNuevo2;
 
 
 
@@ -13,22 +15,24 @@ function calculoTotal(precio, tasa, year) {
 function calcular() {
 
     const inputPrecio = document.getElementById("precio");
-    const precioValue = inputPrecio.Value;
+
+    const precioValue = Number(inputPrecio.value);
 
     const inputTasa = document.getElementById("tasa")
 
-    const tasaValue = inputTasa.Value;
+    const tasaValue = Number(inputTasa.value);
 
     const inputYear = document.getElementById("year")
 
-    const yearValue = inputYear.Value;
+    const yearValue = Number(inputYear.value);
 
-    const calculoNuevo = (precioValue, tasaValue, yearValue)
+    const calculoNuevo2 = calculoTotal(precioValue, tasaValue, yearValue)
 
     const resultPrice = document.getElementById("resultPrice");
 
-    resultPrice.innerText = "calculo es " + calculoNuevo;
+    resultPrice.innerText = "valor de la cuota es : " + calculoNuevo2;
 
+    console.log(precioValue, tasaValue, yearValue)
 
 
 }
