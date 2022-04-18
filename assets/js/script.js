@@ -1,8 +1,10 @@
 function calculoTotal(inputPrecio, inputTasa, inputYear) {
 
-    const interes = (inputPrecio * inputTasa * inputYear);
+    const yearCount = inputYear * 12
 
-    const calculoNuevo = (interes + inputPrecio);
+    const interes = ((inputPrecio * yearCount) * (inputTasa / 100));
+
+    const calculoNuevo = (interes / 12);
 
     const calculoNuevo2 = (calculoNuevo / inputYear)
 
